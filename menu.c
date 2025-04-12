@@ -184,6 +184,7 @@ int menu_main_render(){
                 break;
             case 6:
                 dlc_ll_free_all(lists,MENU_MAX_LISTS);
+                free(lists);
                 return 0;
         }
     }
