@@ -58,7 +58,7 @@ Dlc_list *dlc_list_cpy(Dlc_list *src){
         return NULL;
     }
 
-    Dlc_list *dst = dlc_list_init(_UI32_MAX);
+    Dlc_list *dst = dlc_list_init(15000);
     dst->count = src->count;
 
     Node* src_current = src->current;
