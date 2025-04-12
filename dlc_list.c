@@ -1,11 +1,12 @@
 #include "dlc_list.h"
 #include <stdlib.h>
+#include <assert.h>
 
 Dlc_list *dlc_list_init(unsigned long id){
     Dlc_list *list = malloc(sizeof(Dlc_list));
     if(!list){
         fprintf(stderr, "Dlc_list memory allocation failure!\n");
-        exit(EXIT_FAILURE);
+        assert(false && "Dlc list memory allication failure!");
     }
 
     list->count = 0;
@@ -18,7 +19,7 @@ Dlc_list *dlc_list_init(unsigned long id){
 void dlc_list_free(Dlc_list **list){
     if(!list){
         fprintf(stderr,"List is NULL. It cant be free.\n");
-        return;
+        assert(false && "List is null. It cant be free.\n");
     }
 
     if(!(*list)->current){
@@ -80,7 +81,7 @@ Dlc_list *dlc_list_cpy(Dlc_list *src){
 void dlc_list_insertAfter(Dlc_list *list, Node *new_node){
     if(!list || !new_node){
         fprintf(stderr, "Dlc_list insertion failure! List is null.\n");
-        return;
+        assert(false && "Dlc_list insertion failure! List is null.\n");
     }  
 
     ++list->count;
@@ -107,7 +108,7 @@ void dlc_list_insertAfter(Dlc_list *list, Node *new_node){
 void dlc_list_insertBefore(Dlc_list *list, Node *new_node){
     if(!list || !new_node){
         fprintf(stderr, "Dlc_list insertion failure! List is null.\n");
-        return;
+        assert(false && "Dlc_list insertion failure! List is null.\n");
     }
     
     ++list->count;
@@ -134,7 +135,7 @@ void dlc_list_insertBefore(Dlc_list *list, Node *new_node){
 void dlc_list_deleteCurrent(Dlc_list *list){
     if(!list || !list->current){
         fprintf(stderr,"List is null. Current cannot be deleted!\n");
-        return;
+        assert(false && "List is null. Current cannot be deleted!\n");
     }
 
     Node *to_delete = list->current;

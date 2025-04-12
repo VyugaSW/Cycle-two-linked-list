@@ -6,7 +6,7 @@
 #pragma once
 
 #include <stdio.h>
-#include "Node.h"
+#include "node.h"
 
 /**
  * @brief Doubly linked circular list structure

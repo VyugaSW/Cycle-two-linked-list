@@ -1,7 +1,6 @@
 #pragma once
 
 #include <stdio.h>
-#include <conio.h>
 #ifdef _WIN32
 #include <windows.h>
 #endif
@@ -11,15 +10,6 @@
 #define MENU_MAIN_ITEMS 6 ///< Number of items in the main menu.
 #define MENU_MENULIST_ITEMS 7 ///< Number of items in the list menu.
 #define MENU_MAX_LISTS 20 ///< Maximum number of DLC lists that can be managed.
-
-/**
- * @brief Sets the console text color.
- * 
- * This function changes the color of the console text to the specified color.
- * 
- * @param color The color code to set for the console text.
- */
-void menu_setColor(WORD color);
 
 /**
  * @brief Gets an unsigned long input from the user.
