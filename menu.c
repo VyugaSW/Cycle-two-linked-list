@@ -44,7 +44,7 @@ int menu_get_int_input(const char *prompt) {
 }
 
 int menu_list_render(Dlc_list *list){
-     char *menuItems[MENU_MENULIST_ITEMS] = {
+     const char *menuItems[MENU_MENULIST_ITEMS] = {
         "1. Add element after current",
         "2. Add element before current",
         "3. Show list",
@@ -64,8 +64,7 @@ int menu_list_render(Dlc_list *list){
         printf("\nEnter option number:\n");
         int selected = 0;
         scanf("%d",&selected);
-        
-        printf("\nChoice: %s\n", menuItems[selected]);
+    
         int val = 0;
         switch (selected) {
             case 1:
@@ -137,8 +136,7 @@ int menu_main_render(){
         printf("\nEnter option number:\n");
         int selected = 0;
         scanf("%d",&selected);
-
-        printf("\nChoice: %s\n", menuItems[selected-1]);     
+   
         unsigned long input_id = 0;
         switch (selected) {
             case 1:
@@ -184,7 +182,8 @@ int menu_main_render(){
                     printf("List with id: %lu does not exist", input_id);
 
                 break;
-            case 6:  
+            case 6:
+                dlc_ll_free_all(lists,MENU_MAX_LISTS);
                 return 0;
         }
     }

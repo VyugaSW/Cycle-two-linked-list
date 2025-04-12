@@ -62,3 +62,13 @@ void dlc_ll_showAll(Dlc_list **lists, size_t size);
  * @return int Returns 1 on success, or 0 if the original list was not found or if the addition failed.
  */
 int dlc_ll_copy_list(Dlc_list **lists, size_t size, unsigned long id, unsigned long new_id);
+
+/**
+ * @brief free all DLC lists
+ * 
+ * This function free every not-null pointer DLC list in lists
+ * 
+ * @param lists Pointer to the array of DLC lists.
+ * @param size The current size of the lists array.
+ */
+void dlc_ll_free_all(Dlc_list **list, size_t size);

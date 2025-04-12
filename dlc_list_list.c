@@ -62,3 +62,9 @@ int dlc_ll_copy_list(Dlc_list **lists, size_t size, unsigned long id, unsigned l
 
     return 1;
 }
+
+void dlc_ll_free_all(Dlc_list **list, size_t size){
+    for(size_t i = 0; i < size; ++i){
+        if(list[i]) dlc_list_free(&list[i]);
+    }
+}
