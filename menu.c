@@ -1,3 +1,8 @@
+#include <stdlib.h>
+#include <errno.h>
+#include <limits.h>
+#include <string.h>
+
 #include "menu.h"
 #include "dlc_list.h"
 #include "dlc_list_list.h"

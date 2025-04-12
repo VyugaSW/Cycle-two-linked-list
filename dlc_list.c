@@ -1,5 +1,9 @@
 #include "dlc_list.h"
+
 #include <stdlib.h>
+#include <errno.h>
+#include <limits.h>
+#include <string.h>
 #include <assert.h>
 
 Dlc_list *dlc_list_init(unsigned long id){

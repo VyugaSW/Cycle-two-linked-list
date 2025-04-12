@@ -1,9 +1,6 @@
 #pragma once
 
 #include <stdio.h>
-#ifdef _WIN32
-#include <windows.h>
-#endif
 
 #include "dlc_list.h"
 

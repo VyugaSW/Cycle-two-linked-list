@@ -1,8 +1,3 @@
-/**
- * @file dlc_list.h
- * @brief Header for doubly linked circular list implementation
- */
-
 #pragma once
 
 #include <stdio.h>
